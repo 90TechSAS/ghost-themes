@@ -62,9 +62,12 @@ a#documentation {
 	border-radius: 3px;
 }
 
-#wrapper {
-	padding:100px 40px 100px 40px;
-	max-width:600px;
+#global {
+	padding:20px 20px 20px 20px;
+}
+
+.wrapper {
+	max-width: 960px;
 	margin:0 auto;
 }
 
@@ -73,6 +76,13 @@ a#documentation {
 	width:40px;
 	height:40px;
 	border-radius: 50%;
+}
+
+a.blog > span {
+	font-weight: bold;
+	font-size: 17px;
+	margin-left: 4px;
+	color: #03a9f4;
 }
 
 /*=========================================
@@ -153,8 +163,7 @@ h2 {
 #post-list h2 {
 	font:normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	color:#aaa;
-	max-width:400px;
-	margin-top: 2px;
+	margin-top: 10px;
 }
 
 h1, h2, h3 { color:#333; }
@@ -265,8 +274,8 @@ Post List
 }
 
 #post-list li+li {
-	padding-top:20px;
-	border-top:1px solid #eee;
+	padding-top: 80px;
+	/*border-top:1px solid #eee;*/
 }
 
 #post-list a {
@@ -277,7 +286,6 @@ Post List
 
 #post-list b {
 	display: block;
-	max-width: 400px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
@@ -319,7 +327,7 @@ Post List
 }
 
 footer {
-	box-shadow: inset 0 1px 0 #eee;
+	/*box-shadow: inset 0 1px 0 #eee;*/
 	padding: 40px 0 0 0;
 	margin-top: 40px;
 }
@@ -352,7 +360,27 @@ footer {
 Post Page
 =========================================== */
 #header {
+	margin-top: 40px; /* padding:100px 40px 100px 40px; */
 	border-bottom:1px solid #eee;
+	padding-bottom: 25px;
+}
+
+#brand {
+	width: auto;
+	height: 60px;
+}
+
+.return {
+	float: right;
+	line-height: 40px;
+	font-size: 16px;
+	height: 40px;
+	background: #03a9f4;
+	border-radius: 10px;
+	margin-top: 10px;
+	color: white;
+	font-weight: bold;
+	padding: 0 20px;
 }
 
 .post {
@@ -364,6 +392,7 @@ Post Page
 	font-weight:bold;
 	line-height:1.4;
 	margin-top:80px;
+	margin-bottom: 40px;
 	color:#444;
 }
 
@@ -381,14 +410,16 @@ Post Page
 }
 
 #sharing {
-	float:right;
-	margin:-2px;
+	border-top: 1px solid #eee;
+	margin-top: 60px;
+	padding-top: 40px;
+	text-align: center;
 }
 
 #sharing a {
-	font-size:28px;
-	width: 22px;
-	margin-left:1px;
+	font-size:96px;
+	width: 44px;
+	margin-right: 40px;
 	margin-top:4px;
 	color:#d4d4d4;
 	display:inline-block;
@@ -400,9 +431,9 @@ Post Page
 }
 
 #comments {
-	border-top: 1px solid #eee;
-	padding-top: 40px;
+	padding: 40px 0;
 	margin-top: 80px;
+	background: #fbfbfb;
 }
 
 .post input {
@@ -525,7 +556,10 @@ Author
 /*=====================*/
 
 @media screen and (max-width: 540px) {
-#wrapper { padding:20px 20px 20px 20px;}
+#global { margin-top: -100px;}
+a.blog > span {
+	display: none;
+}
 #header { margin-bottom: 60px; border-bottom: 1px solid #eee; }
 .post { margin: 40px 0; }
 footer { margin-top: 60px; }

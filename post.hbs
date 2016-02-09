@@ -6,22 +6,23 @@
 
     <article class="post">
 
-    	<header>
+    	<header class="wrapper">
     		<h1>{{title}}</h1>
     	</header>
 
-    	<section id="post-body">
-            {{content}}
-        </section>
+    	<section id="post-body" class="wrapper">
+        {{content}}
+      </section>
 
-        {{!> comments}}
+      {{> share}}
 
-        <footer id="post-meta" class="clearfix">
-            <div><span>Posted on </span> <time class="dates" datetime="{{date format='YYYY-MM-DD'}}">{{date format='MMM D, YYYY'}}</time></div>
-            <div><span>Written by</span> {{author}}</div>
-            <div><span>Tagged under</span> {{tags}}</div>
-            {{> share}}
-        </footer>
+      {{> comments}}
+
+      <footer id="post-meta" class="clearfix wrapper">
+        <div><span>Posté le </span> <time class="dates" datetime="{{date format='DD-MM-YYYY'}}">{{date format='DD-MM-YYYY'}}</time></div>
+        <div><span>Ecrit par</span> {{author}}</div>
+        <div><span>Mots-Clés</span> {{tags}}</div>
+      </footer>
 
     </article>
 

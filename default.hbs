@@ -7,7 +7,7 @@
         <meta charset="utf-8" />
         <meta name="designer" content="Hayden Bleasel" />
         <meta name="rating" content="general" />
-        <meta name="keywords" content="ghost, blog, {{meta_title}}" />
+        <meta name="keywords" content="{{meta_title}}" />
 
         {{! iOS, Android and Windows stuff }}
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -24,7 +24,7 @@
         {{! OpenGraph for Facebook }}
         <meta property="og:title" content="{{meta_title}}" />
         <meta property="og:image" content="{{@blog.url}}/assets/images/open-graph.png" />
-        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale" content="fr_FR" />
 
         {{! Twitter Card }}
         <meta property="twitter:card" content="summary_large_image" />
@@ -57,24 +57,24 @@
 
     </head>
     <body class="{{body_class}}">
+      <div id="global">
+        <header id="header" class="wrapper">
+          <a href="{{@blog.url}}" class="blog"><img src="/assets/images/brand.png" id="brand"> <span>LES ACTUS</span></a>
+          <a href="https://www.90tech.fr" class="return">Retour au site</a>
+        </header>
+        <!--  -->
 
-        <section id="wrapper">
-            <header id="header">
-                <a id="title" class="index" href="{{@blog.url}}">{{@blog.title}}</a>
-            </header>
+        {{{body}}}
 
-            {{{body}}}
+        <footer id="footer">
+          <div class="wrapper">
 
-            <footer id="footer">
-                <p class="small">
-                    <a href="https://github.com/haydenbleasel/phantom">Theme: Cactus by Hayden Bleasel</a>
-                </p>
-            </footer>
+          </div>
+        </footer>
 
-        </section>
 
         {{ghost_foot}}
-
+      </div>
         {{! Deferred scripts }}
         <script src="{{asset 'js/fastclick.js'}}"></script>
         <script src="{{asset 'js/cactus.js'}}"></script>
