@@ -3,9 +3,8 @@
       {{#foreach posts}}
           <li>
               <a href='{{url}}'>
-                <time class="dates" datetime="{{date format='DD-MM-YYYY'}}">{{date format='DD-MM-YYYY'}}</time>
-                  <b>{{title}}</b>
-                  <h2>{{excerpt characters="500"}}&hellip;</h2>
+                  <b>{{title}} <small><time datetime="{{date format='DD-MM-YYYY'}}">{{date format='DD-MM-YYYY'}}</time><small></b>
+                  <p>{{excerpt characters="480"}}&hellip;</p>
               </a>
           </li>
       {{/foreach}}

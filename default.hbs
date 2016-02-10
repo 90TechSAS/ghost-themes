@@ -57,24 +57,29 @@
 
     </head>
     <body class="{{body_class}}">
-      <div id="global">
         <header id="header" class="wrapper">
           <a href="{{@blog.url}}" class="blog"><img src="/assets/images/brand.png" id="brand"> <span>LES ACTUS</span></a>
           <a href="https://www.90tech.fr" class="return">Retour au site</a>
         </header>
-        <!--  -->
 
         {{{body}}}
-
+        
         <footer id="footer">
           <div class="wrapper">
+            <div class="section group">
+              <div class="col span_1_of_5">
+                <img src="/assets/images/brand-reverse.png" alt="90Tech" style="width: auto; height: 60px;">
+            	</div>
+            	<div class="col span_4_of_5">
 
+            	</div>
+            </div>
           </div>
         </footer>
 
 
         {{ghost_foot}}
-      </div>
+
         {{! Deferred scripts }}
         <script src="{{asset 'js/fastclick.js'}}"></script>
         <script src="{{asset 'js/cactus.js'}}"></script>

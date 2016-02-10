@@ -62,13 +62,22 @@ a#documentation {
 	border-radius: 3px;
 }
 
-#global {
-	padding:20px 20px 20px 20px;
+@media only screen and (max-width: 960px) {
+	.wrapper {
+		padding: 0 20px;
+	}
 }
 
 .wrapper {
-	max-width: 960px;
+	max-width: 700px;
 	margin:0 auto;
+}
+
+#footer {
+	background: #555;
+	width: 100%;
+	color: white;
+	padding-bottom: 40px;
 }
 
 #avatar {
@@ -160,9 +169,10 @@ h2 {
 	margin:-5px 0 40px 0;
 }
 
-#post-list h2 {
+#post-list p {
 	font:normal 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	color:#aaa;
+	text-align: justify;
 	margin-top: 10px;
 }
 
@@ -267,15 +277,11 @@ Post List
 
 #post-list li,#archive-list li {
 	list-style-type:none;
+	margin-bottom: 80px;
 }
 
 #post-list li:last-child {
-	margin-bottom:0;
-}
-
-#post-list li+li {
-	padding-top: 80px;
-	/*border-top:1px solid #eee;*/
+	margin-bottom: 0;
 }
 
 #post-list a {
@@ -289,6 +295,13 @@ Post List
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+	font-size: 28px;
+}
+
+#post-list b > small {
+	font-size: 14px;
+	margin-left: 10px;
+	color: #ccc;
 }
 
 #post-list .dates {
@@ -391,7 +404,6 @@ Post Page
 	font-size:13px;
 	font-weight:bold;
 	line-height:1.4;
-	margin-top:80px;
 	margin-bottom: 40px;
 	color:#444;
 }
@@ -433,7 +445,7 @@ Post Page
 #comments {
 	padding: 40px 0;
 	margin-top: 80px;
-	background: #fbfbfb;
+	background: #f4f4f4;
 }
 
 .post input {
@@ -574,4 +586,50 @@ footer { margin-top: 60px; }
 
 h1 { font-size: 26px; }
 .post h2.headline { font-size: 20px; }
+}
+
+
+/*=====================*/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+
+/*  GRID OF FIVE  */
+.span_5_of_5 {
+	width: 100%;
+}
+.span_4_of_5 {
+	width: 79.68%;
+}
+.span_3_of_5 {
+	width: 59.36%;
+}
+.span_2_of_5 {
+	width: 39.04%;
+}
+.span_1_of_5 {
+	width: 18.72%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_1_of_5, .span_2_of_5, .span_3_of_5, .span_4_of_5, .span_5_of_5 { width: 100%; }
 }
